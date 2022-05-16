@@ -1,0 +1,30 @@
+.container{
+    border:2px solid red;
+    display:flex;
+}
+
+
+
+.flexbox-item{
+    background-color: aqua;
+    width:200px;/*flex-basis ile ayni*/
+    margin:10px;
+    border:1px solid black;
+}
+
+.item-1{
+    flex-shrink:0; /*eger yaptigimiz kutucuk kücülmesini istemiyorsak 0 sifir veriyoruz. bunu flex-shrink ile yapiyoruz. digerleri kücülür ama bu kücülmez.eger 4 yazarsak digerleri 1 ise bu kutucuk 4 kat daha hizli kücülür.*/
+    min-height:100px;
+}
+
+.item-2{
+
+    min-height:200px;
+    flex-grow:2;/*sayfanin eger bir bölümü bos kalirsa kalan boslugu kutucugu bos tarafa dogru uzatarak kapatma isini gerceklestiriyor.*/
+}
+
+.item-3{
+    min-height:250px;
+    /* align-self:flex-end; */
+    flex-grow:1; /*bütün bölümlere flex-grow; yazilirsa bu sefer sayi degeri miktarinca oranlayarak yapiyor. yailan rakamin degeri önemli oluyor.hepsine 1 verilirse mesela, hepsi kalan boslugu ayni oranda doldurur.*/
+}
